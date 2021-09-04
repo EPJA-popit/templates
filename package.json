@@ -1,0 +1,25 @@
+{
+  "name": "@popit/templates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EPJA-popit/templates.git"
+  },
+  "author": "popit team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EPJA-popit/templates/issues"
+  },
+  "homepage": "https://github.com/EPJA-popit/templates#readme",
+  "devDependencies": {
+    "express": "^4.17.1"
+  },
+  "dependencies": {
+    "express-hbs": "^2.4.0"
+  }
+}
