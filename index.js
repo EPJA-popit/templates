@@ -8,7 +8,7 @@ module.exports = function applyHbs(app) {
 
   hbs.registerHelper('toJSON', (obj) => {
     if (typeof obj === 'object') {
-      return JSON.stringify(obj )
+      return JSON.stringify(obj)
     }
     return obj
   });
