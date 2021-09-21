@@ -1,28 +1,28 @@
 // const app = require('express')();
-const hbs = require('express-hbs');
+const hbs = require("express-hbs");
 
 module.exports = function applyHbs(app) {
-  app.engine('hbs', hbs.express4({}));
-  app.set('view engine', 'hbs');
-  app.set('views', __dirname + '/views');
+  app.engine("hbs", hbs.express4({}));
+  app.set("view engine", "hbs");
+  app.set("views", __dirname + "/views");
 
-  hbs.registerHelper('toJSON', (obj) => {
-    if (typeof obj === 'object') {
-      return JSON.stringify(obj)
+  hbs.registerHelper("toJSON", (obj) => {
+    if (typeof obj === "object") {
+      return JSON.stringify(obj);
     }
-    return obj
+    return obj;
   });
-}
- 
+};
+
 // app.get('/', (req, res) => {
 //   res.render('index', {
 //     staticUrl: '/static',
 //     fireAppVersion: '1.0.0',
-//     apps: { 
-//       foo: { 
-//         version: '1.0.0', 
-//         name: 'foo' 
-//       } 
+//     apps: {
+//       foo: {
+//         version: '1.0.0',
+//         name: 'foo'
+//       }
 //     },
 //     navigations: {
 //       'dummy.main': '/dummy',
@@ -31,7 +31,7 @@ module.exports = function applyHbs(app) {
 //     config: {},
 //     title: 'Popit app',
 //   })
-// }); 
+// });
 
 // app.listen(5000, () => {
 //   console.log(`❤️❤️❤️  Server started listening on http://localhost:5000  ❤️❤️❤️`);
