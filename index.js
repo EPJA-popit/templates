@@ -1,7 +1,8 @@
 // const app = require('express')();
-const hbs = require("express-hbs");
 
-module.exports = function applyHbs(app) {
+function applyHbs(app) {
+  const hbs = require("express-hbs");
+
   app.engine("hbs", hbs.express4({}));
   app.set("view engine", "hbs");
   app.set("views", __dirname + "/views");
@@ -12,7 +13,9 @@ module.exports = function applyHbs(app) {
     }
     return obj;
   });
-};
+}
+
+module.exports = applyHbs;
 
 // app.get('/', (req, res) => {
 //   res.render('index', {
@@ -24,7 +27,7 @@ module.exports = function applyHbs(app) {
 //         name: 'foo'
 //       }
 //     },
-//     navigations: {
+//     navigation: {
 //       'dummy.main': '/dummy',
 //       'dummy.login': '/dummy/login',
 //     },
@@ -33,6 +36,7 @@ module.exports = function applyHbs(app) {
 //   })
 // });
 
+// applyHbs(app)
 // app.listen(5000, () => {
 //   console.log(`❤️❤️❤️  Server started listening on http://localhost:5000  ❤️❤️❤️`);
 // });
